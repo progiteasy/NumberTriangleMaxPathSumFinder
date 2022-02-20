@@ -18,7 +18,7 @@ namespace NumberTriangleMaxPathSumFinder.Models
 
         public long CalculateMaxPathSum()
         {
-            var pathSums = _numbers.Last().ToArray();
+            var pathSums = _numbers.Last().Select(number => Convert.ToInt64(number)).ToArray();
             
             for (var i = _numbers.Length - 2; i >= 0; i--)
                 for (var j = 0; j <= i; j++)
